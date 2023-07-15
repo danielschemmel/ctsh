@@ -1,0 +1,26 @@
+[package]
+name = "ctsh-proc"
+version = "0.0.0"
+description = "Part of the ctsh crate: This crate provides the proc-macros."
+readme = "README.md"
+authors = ["Daniel Schemmel <daniel@schemmel.net>"]
+repository = "https://github.com/danielschemmel/ctsh/"
+license = "MIT OR Apache-2.0"
+
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+duct = "0.13"
+proc-macro2 = "1"
+proc-macro-error = "1"
+quote = "1"
+syn = { version = "2", features = ["full"] }
+tempfile = "3"
+
+[dev-dependencies]
+
+[features]
+default = []
