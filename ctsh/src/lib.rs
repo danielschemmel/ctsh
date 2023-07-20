@@ -21,8 +21,8 @@
 //! ```
 //! # use ctsh::ctsh;
 //! let result = ctsh!{
-//! 	"echo" "1" as str;
-//! 	"echo" "foo" as str;
+//!   "echo" "1" as str;
+//!   "echo" "foo" as str;
 //! };
 //! assert_eq!(result.0.trim(), "1");
 //! assert_eq!(result.1.trim(), "foo");
@@ -33,15 +33,15 @@
 //! ```
 //! # use ctsh::ctsh;
 //! let result = ctsh!{
-//! 	"echo" "moo";           // execute command and ignore its output
-//! 	"echo" "oink" as str;   // capture output as string literal (`&'static str`)
-//! 	"echo" "meow" as bytes; // capture output as byte literal (`&'static [u8; _]`)
-//! 	"echo" "()" as expr;    // capture output as Rust expression
+//!   "echo" "moo";           // execute command and ignore its output
+//!   "echo" "oink" as str;   // capture output as string literal (`&'static str`)
+//!   "echo" "meow" as bytes; // capture output as byte literal (`&'static [u8; _]`)
+//!   "echo" "()" as expr;    // capture output as Rust expression
 //! };
 //! assert_eq!(result, ("oink\n", b"meow\n", ()));
 //!
 //! ctsh!{
-//! 	"echo" r#"
+//!   "echo" r#"
 //!     #[derive(Debug)]
 //!     struct Foo;
 //!     let result = format!("{:?}", Foo);
@@ -63,8 +63,8 @@
 //! ```
 //! # use ctsh::ctsh;
 //! let result = ctsh!{
-//! 	cd "/";
-//! 	"pwd" as str;
+//!   cd "/";
+//!   "pwd" as str;
 //! };
 //! assert_eq!(result.trim(), "/");
 //! ```
@@ -74,8 +74,8 @@
 //! ```
 //! # use ctsh::ctsh;
 //! ctsh!{
-//! 	cd temp;
-//! 	"touch" "garbage"; // does not leave any `garbage` files on your computer
+//!   cd temp;
+//!   "touch" "garbage"; // does not leave any `garbage` files on your computer
 //! }
 //! ```
 //!
