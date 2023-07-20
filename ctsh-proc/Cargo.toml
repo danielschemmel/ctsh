@@ -1,6 +1,6 @@
 [package]
 name = "ctsh-proc"
-version = "0.0.0"
+version = "0.0.1"
 description = "Part of the ctsh crate: This crate provides the proc-macros."
 readme = "README.md"
 authors = ["Daniel Schemmel <daniel@schemmel.net>"]

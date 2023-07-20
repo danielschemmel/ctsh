@@ -1,6 +1,6 @@
 [package]
 name = "ctsh"
-version = "0.0.0"
+version = "0.0.1"
 description = "Runs rust code at compile time."
 readme = "../README.md"
 authors = ["Daniel Schemmel <daniel@schemmel.net>"]
@@ -10,7 +10,7 @@ license = "MIT OR Apache-2.0"
 edition = "2021"
 
 [dependencies]
-ctsh-proc = { version = "=0.0.0", path = "../ctsh-proc" }
+ctsh-proc = { version = "=0.0.1", path = "../ctsh-proc" }
 
 [features]
 default = []
