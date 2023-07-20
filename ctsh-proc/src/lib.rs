@@ -10,12 +10,12 @@ use proc_macro_error::{abort, abort_call_site, proc_macro_error};
 use syn::parse_macro_input;
 
 mod syntax;
-use self::syntax::{Disposition, Syntax};
+use self::syntax::{Disposition, Script};
 
 #[proc_macro_error]
 #[proc_macro]
 pub fn ctsh(input: TokenStream) -> TokenStream {
-	let Syntax { commands } = parse_macro_input!(input as Syntax);
+	let Script { commands } = parse_macro_input!(input as Script);
 
 	let mut dir: PathBuf = std::env::var_os("CARGO_MANIFEST_DIR")
 		.expect("Could not determine CARGO_MANIFEST_DIR")

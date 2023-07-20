@@ -3,11 +3,11 @@ use syn::parse::Parse;
 use super::Item;
 
 #[derive(Clone, Debug)]
-pub struct Syntax {
+pub struct Script {
 	pub commands: Vec<Item>,
 }
 
-impl Parse for Syntax {
+impl Parse for Script {
 	fn parse(input: syn::parse::ParseStream) -> syn::Result<Self> {
 		let commands = input.parse_terminated(Item::parse, syn::Token![;])?;
 

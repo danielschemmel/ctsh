@@ -11,8 +11,8 @@ mod kw {
 	syn::custom_keyword!(temp);
 }
 
-mod syntax;
-pub use syntax::Syntax;
+mod script;
+pub use script::Script;
 
 mod item;
 pub use item::Item;
