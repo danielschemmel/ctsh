@@ -13,7 +13,7 @@ edition = "2021"
 proc-macro = true
 
 [dependencies]
-duct = "0.13"
+duct = "1.1.0"
 proc-macro2 = "1"
 proc-macro-error = "1"
 quote = "1"
